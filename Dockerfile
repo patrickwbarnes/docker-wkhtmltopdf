@@ -10,5 +10,6 @@ RUN DEBIAN_FRONTEND=noninteractive \
     wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.xenial_amd64.deb \
  && apt-get install -y ./wkhtmltox_0.12.5-1.xenial_amd64.deb
 
+ENTRYPOINT []
 CMD ["wkhtmltopdf","-H"]
 
