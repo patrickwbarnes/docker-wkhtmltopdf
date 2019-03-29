@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
 
+# Use bash instead of dash as default sh
+RUN ln -sf bash /bin/sh
+
 RUN DEBIAN_FRONTEND=noninteractive \
     sed -i 's/main$/main universe/' /etc/apt/sources.list \
  && apt-get update \
